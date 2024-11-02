@@ -3,10 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.HospedagemContratada"
              Title="HospedagemContratada">
-    <VerticalStackLayout>
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10">
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Text="Hospedagem"
+            FontFamily="MonoBold"
+            FontSize="35"
+            TextColor="White"/>
+
+        <Button Text="Avançar"
+                BackgroundColor="black"
+                Clicked="Button_Clicked" />
+
     </VerticalStackLayout>
 </ContentPage>

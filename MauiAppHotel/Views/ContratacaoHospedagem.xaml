@@ -4,19 +4,21 @@
              x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
              Title="ContratacaoHospedagem"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="DarkBlue">
+             BackgroundColor="{StaticResource OffBlack}">
     
     <VerticalStackLayout VerticalOptions="CenterAndExpand"
-                         Padding="10">
+                         Padding="15">
         
         <Label 
             Text="Cálculo da Diária"
             FontFamily="MonoBold"
-            FontSize="35"
-            TextColor="White"/>
+            FontSize="30"
+            Padding="15"
+            TextColor="White"
+            HorizontalTextAlignment="Center"/>
 
         <Frame Padding="10"
-               BackgroundColor="AliceBlue">
+               BackgroundColor="{StaticResource Gray100}">
             <VerticalStackLayout>
                 <Grid RowDefinitions="Auto, Auto"
                       ColumnDefinitions="*, *, 2*">
@@ -27,8 +29,9 @@
                     <Label Grid.Row="0" Grid.Column="1"
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_adultos}"/>
-                           
-                    <Stepper Grid.Row="0" Grid.Column="2"
+
+                    <Stepper BackgroundColor="White"
+                             Grid.Row="0" Grid.Column="2"
                              x:Name="stp_adultos"
                              Minimum="0"
                              Maximum="10"
@@ -43,7 +46,8 @@
                         Text="{Binding Value}"
                         BindingContext="{x:Reference stp_criança}" />
 
-                    <Stepper Grid.Row="1" Grid.Column="2"
+                    <Stepper BackgroundColor="White"
+                             Grid.Row="1" Grid.Column="2"
                              x:Name="stp_criança"
                              Minimum="0"
                              Maximum="10"
@@ -51,8 +55,20 @@
                 </Grid>
 
 
-                <Picker x:Name="pck_quarto"
-                        Title="Selecione a sua Acomodação">
+                <Label
+                    Text="Selecione a sua Acomodação"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Margin="0,20,0,8" >
+                </Label>
+
+                <Picker WidthRequest="314"
+                        BackgroundColor="White"
+                        x:Name="pck_quarto"
+>
+
+
                     <Picker.Items>
                         <x:String>Quarto Standard</x:String>
                         <x:String>Quarto Deluxe</x:String>
@@ -64,23 +80,27 @@
 
                 <Frame Padding="10"
                        Margin="10"
-                       BackgroundColor="AliceBlue" >
+                       BackgroundColor="White" >
                     <VerticalStackLayout>
                         <Label Text="Periodo da Estadia"
+                               FontSize="18"
+                               FontAttributes="Bold"
                                HorizontalOptions="Center"/>
                         <HorizontalStackLayout>
                             
                             <Label Text="Check-in:" />
-                            <DatePicker x:Name="dtpck_Checkin"
+                            <DatePicker Margin="17"
+                                        x:Name="dtpck_Checkin"
                                         Format="dd/mm/yyyy" />
                                         
                         </HorizontalStackLayout>
 
-                        <HorizontalStackLayout>
+                        <HorizontalStackLayout  >
                             <Label Text="Check-out:" />
-                            <DatePicker  x:Name="dtpck_Checkout"
+                            <DatePicker  Margin="9"
+                                         x:Name="dtpck_Checkout"
                                          Format="dd/mm/yyyy" />
-
+                            
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </Frame>
