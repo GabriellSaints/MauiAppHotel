@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel.Views.Sobre"
              Title="Sobre"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource OffBlack}">
 
     <VerticalStackLayout VerticalOptions="CenterAndExpand"
                          Padding="5">
@@ -12,18 +13,42 @@
             Text="Sobre"
             FontFamily="MonoBold"
             FontSize="35"
-            TextColor="Black"
+            TextColor="White"
             HorizontalTextAlignment="Center" />
 
 
         <Frame Padding="10"
                Margin="10"
-               BackgroundColor="AliceBlue">
+               BackgroundColor="{StaticResource Gray100}">
 
-            <VerticalStackLayout>
-                <Label>
+            <VerticalStackLayout >
+                <Label
+                    Text="Hotel Nébula"
+                    FontSize="18"
+                    FontFamily="MonoBold"
+                    HorizontalOptions="Center"
+                    Padding="0,5,0,10"> 
+                </Label>
+
+                <Label 
+                    VerticalOptions="Center" 
+                    Text="O Hotel Nébula é um destino exclusivo para quem valoriza o minimalismo,com foco no preto, branco e design elegante Localizado em um ambiente tranquilo, o hotel oferece suítes modernas e sofisticadas, com decoração em tons neutros e janelas amplas que destacam a paisagem. Com uma piscina estilosa e um bistrô de gastronomia contemporânea, o Nébula proporciona uma experiência de serenidade e bom gosto. &#10;"
+                    FontSize="14"
+                    Padding="0,0,0,10"
+                    FontFamily="Bahnschrift Light">
+                </Label>
+
+                <Label
+                    VerticalOptions="Center"
+                    FontAttributes="Bold"
+                    Text="Desenvolverdor: Gabriel Santos  &#10;Data de criação: 2024">
+
+                    FontSize="14"
+                    Padding="0,0,0,5"
+                    FontFamily="Bahnschrift Light">
                     
                 </Label>
+
             </VerticalStackLayout>
             
         </Frame>
