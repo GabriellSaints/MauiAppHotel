@@ -41,8 +41,7 @@
                 <Label
                     VerticalOptions="Center"
                     FontAttributes="Bold"
-                    Text="Desenvolverdor: Gabriel Santos  &#10;Data de criação: 2024">
-
+                    Text="Desenvolverdor: Gabriel Santos  &#10;Data de criação: 2024"
                     FontSize="14"
                     Padding="0,0,0,5"
                     FontFamily="Bahnschrift Light">
