@@ -58,10 +58,12 @@
 
 	<ItemGroup>
 	  <Compile Remove="Views\HospedagemContratada.xaml.cs" />
+	  <Compile Remove="Views\sobre voce.xaml.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Remove="Views\HospedagemContratada.xaml" />
+	  <MauiXaml Remove="Views\sobre voce.xaml" />
 	</ItemGroup>
 
 	<ItemGroup>
