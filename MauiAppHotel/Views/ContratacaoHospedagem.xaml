@@ -4,7 +4,7 @@
              x:Class="MauiAppHotel.Views.ContratacaoHospedagem"
              Title="ContratacaoHospedagem"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource OffBlack}">
+             BackgroundColor="{StaticResource Gray950}">
     
     <VerticalStackLayout VerticalOptions="CenterAndExpand"
                          Padding="15">
@@ -22,31 +22,38 @@
             <VerticalStackLayout>
                 <Grid RowDefinitions="Auto, Auto"
                       ColumnDefinitions="*, *, 2*">
+                      
 
                     <Label Grid.Row="0" Grid.Column="0"
-                           Text="Adultos:" />
+                           Text="Adultos:"
+                           TextColor="Black"/>
+                    
 
                     <Label Grid.Row="0" Grid.Column="1"
                            Text="{Binding Value}"
+                           TextColor="Black"
                            BindingContext="{x:Reference stp_adultos}"/>
 
-                    <Stepper BackgroundColor="White"
+                    <Stepper BackgroundColor="{StaticResource Gray600}"   
                              Grid.Row="0" Grid.Column="2"
                              x:Name="stp_adultos"
                              Minimum="0"
                              Maximum="10"
-                             Increment="1" />
+                             Increment="1"
+                             />
 
                     
                     
                     <Label Grid.Row="1" Grid.Column="0"
-                           Text="Crianças:" />
+                           Text="Crianças:"
+                           TextColor="Black"/>
 
                     <Label Grid.Row="1" Grid.Column="1"      
                         Text="{Binding Value}"
+                           TextColor="Black"
                         BindingContext="{x:Reference stp_criança}" />
 
-                    <Stepper BackgroundColor="White"
+                    <Stepper BackgroundColor="{StaticResource Gray600}"
                              Grid.Row="1" Grid.Column="2"
                              x:Name="stp_criança"
                              Minimum="0"
@@ -57,6 +64,7 @@
 
                 <Label
                     Text="Selecione a sua Acomodação"
+                    TextColor="Black"
                     FontSize="18"
                     FontFamily="MonoBold"
                     HorizontalOptions="Center"
@@ -64,8 +72,10 @@
                 </Label>
 
                 <Picker WidthRequest="314"
-                        BackgroundColor="White"
+                        BackgroundColor="{StaticResource Gray600}"
+                        TextColor="white"
                         x:Name="pck_quarto"
+                        
 >
 
 
@@ -76,28 +86,34 @@
                         <x:String>Penthouse</x:String>
                     </Picker.Items>
                 </Picker>
-                        
+
 
                 <Frame Padding="10"
                        Margin="10"
-                       BackgroundColor="White" >
+                       BackgroundColor="{StaticResource Gray600}">
                     <VerticalStackLayout>
                         <Label Text="Periodo da Estadia"
+                               TextColor="White"
                                FontSize="18"
                                FontFamily="MonoBold"
                                HorizontalOptions="Center"/>
                         <HorizontalStackLayout>
                             
-                            <Label Text="Check-in:" />
+                            <Label Text="Check-in:"
+                                   
+                                   TextColor="White"/>
                             <DatePicker Margin="17"
+                                        TextColor="White"
                                         x:Name="dtpck_Checkin"
                                         Format="dd/mm/yyyy" />
                                         
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout  >
-                            <Label Text="Check-out:" />
+                            <Label Text="Check-out:"
+                                   TextColor="White"/>
                             <DatePicker  Margin="9"
+                                         TextColor="White"
                                          x:Name="dtpck_Checkout"
                                          Format="dd/mm/yyyy" />
                             
@@ -107,13 +123,15 @@
 
                 <Grid Padding="0,0,0,3">
                     <Button Text="Calcular"
-                        BackgroundColor="black"
+                        BackgroundColor="{StaticResource Gray600}"
+                        TextColor="White"
                         FontFamily="MonoBold"
                         Clicked="Button_Clicked_1"/>
                 </Grid>
                 <Grid>
                     <Button Text="Sobre"
-                        BackgroundColor="black"
+                        BackgroundColor="{StaticResource Gray600}"
+                        TextColor="White"
                         FontFamily="MonoBold"
                         Clicked="Button_Clicked_1"/>
                 </Grid>
